@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FARI Apps</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+    }
+    /* Header */
+    .header {
+      background: #0b4daa;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+    }
+    .header img {
+      height: 40px;
+      position: absolute;
+      left: 15px;
+      top: 10px;
+    }
+    .balance {
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      background: white;
+      color: black;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .username {
+      margin-top: 60px;
+      background: white;
+      display: inline-block;
+      padding: 6px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    /* Menu Grid */
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+    .menu button {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #0b4daa;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .menu button:hover {
+      background: #eaf2ff;
+    }
+    /* Bottom Nav */
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      background: #0b4daa;
+      color: white;
+      padding: 12px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .bottom-nav div {
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    /* Floating QR button */
+    .qr-btn {
+      position: fixed;
+      bottom: 55px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffcc00;
+      color: green;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://i.ibb.co/G0j4Fsj/fari-logo.png" alt="FARI Logo">
+    <h2>FARI apps.BANGLADESH.limited</h2>
+    <div class="balance">৳ Balance</div>
+    <div class="username">MD RAKIBUL HASAN</div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
+    <button onclick="action('Send Money')">Send Money</button>
+    <button onclick="action('Mobile Recharge')">Mobile Recharge</button>
+    <button onclick="action('Cash Out')">Cash Out</button>
+    <button onclick="action('Payment')">Payment</button>
+    <button onclick="action('Add Money')">Add Money</button>
+    <button onclick="action('Savings')">Savings</button>
+  </div>
+
+  <!-- QR Button -->
+  <div class="qr-btn" onclick="action('Quick Pay')">QR</div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <div onclick="action('Statement')">Statement</div>
+    <div onclick="action('Offers')">Offers</div>
+    <div onclick="action('Quick Pay')">Quick Pay</div>
+    <div onclick="action('Location')">Location</div>
+    <div onclick="action('FAQ')">FAQ</div>
+  </div>
+
+  <script>
+    function action(name) {
+      alert(name + " feature clicked ✅ (Demo)");
+    }
+  </script>
+</body>
+</html>
